@@ -40,6 +40,12 @@ This repository distributes **binaries and documentation only; application imple
 
 Chinese walkthrough on Bilibili: see the tool in action and the Mod results. For the Global client only.
 
+**[▶ YouTube：ChaosToolkit 视频教程 / ChaosToolkit Video Tutorial](https://youtu.be/7bK_CCKhMWI)**
+
+英文讲解版：查看工具操作与 MOD 制作流程。仅适用于国际服。
+
+English walkthrough: follow the tool operations and Mod creation workflow. For the Global client only.
+
 > 点击下面的功能标题即可展开或收起。首次使用建议先完成一个资源的预览与制作副本检查，再生成或安装补丁。
 >
 > Click a section below to expand it. For your first run, preview one asset and check its editable Mod copy before building or installing a patch.
