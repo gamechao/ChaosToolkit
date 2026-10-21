@@ -1,0 +1,7 @@
+*.zip
+*.exe
+*.dll
+*.pdb
+*.pyc
+data/
+private-snapshots/

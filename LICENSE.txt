@@ -1,0 +1,12 @@
+二进制软件使用许可
+
+适用对象：ChaosToolkit 中发布者自行开发且有权授权的程序部分。第三方组件受各自许可证约束。
+发布者对自行开发部分保留著作权。允许免费安装、运行和为合法用途使用发布者通过正式仓库提供的未经修改的二进制版本。
+本许可不提供实现源码授权，本项目不是整体开源项目。
+未经另行授权，不授予出售、再许可、再分发项目自有二进制或使用项目商标的权利。
+本条不限制第三方许可证已经授予的权利，也不限制适用法律不能排除的权利。
+不授予任何游戏素材、游戏代码、第三方 MOD、Spine、模型或平台内容的权利。
+软件按现状提供；在法律允许范围内，不保证适用性、兼容性、不侵权或持续维护。
+法律不能排除的责任和消费者权利不受本条限制。
+
+Binary use license: free installation and lawful use of the publisher's unmodified official binaries are permitted. No source license is granted. Sale, sublicensing and redistribution of proprietary components require separate authorization. Third-party license grants and mandatory statutory rights are unaffected. No rights in game assets, third-party mods, models or trademarks are granted. Provided as-is to the extent permitted by law.
