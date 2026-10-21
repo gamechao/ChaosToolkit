@@ -32,6 +32,14 @@ This repository distributes **binaries and documentation only; application imple
 
 **当前版本 / Current version: 1.0.0** · **国际服 / Global client only** · Windows 10/11 x64 · `Start.cmd`
 
+### 🎬 视频教程 / Video tutorial
+
+**[▶ B站：【卡厄思梦境】来点小小的皮肤震撼！](https://www.bilibili.com/video/BV1Qrni6kEV4/)**
+
+中文实操视频：查看工具操作与 MOD 制作效果。仅适用于国际服。
+
+Chinese walkthrough on Bilibili: see the tool in action and the Mod results. For the Global client only.
+
 > 点击下面的功能标题即可展开或收起。首次使用建议先完成一个资源的预览与制作副本检查，再生成或安装补丁。
 >
 > Click a section below to expand it. For your first run, preview one asset and check its editable Mod copy before building or installing a patch.
