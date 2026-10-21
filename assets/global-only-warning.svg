@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="210" viewBox="0 0 1400 210" role="img" aria-labelledby="title desc">
+  <title id="title">仅限国际服！国服请勿使用！ Global server only</title>
+  <desc id="desc">ChaosToolkit supports only the Global client. Do not use with the China server client.</desc>
+  <rect x="4" y="4" width="1392" height="202" rx="16" fill="#fff1f2" stroke="#dc2626" stroke-width="8"/>
+  <text x="700" y="90" text-anchor="middle" fill="#b91c1c" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="62" font-weight="900">仅限国际服！国服请勿使用！</text>
+  <text x="700" y="156" text-anchor="middle" fill="#b91c1c" font-family="Arial, sans-serif" font-size="37" font-weight="800">GLOBAL SERVER ONLY — DO NOT USE WITH THE CHINA SERVER</text>
+</svg>
