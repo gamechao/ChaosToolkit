@@ -22,7 +22,7 @@ QQ group for tool discussion: **949036810**.
 
 ### 🔗 卡厄思相关工具推荐 / Related tools
 
-[ChaosZeroNightmare-UserGuider](https://github.com/yporoc/ChaosZeroNightmare-UserGuider)：另外一位大佬整理的卡厄思其他功能相关工具汇总。
+[ChaosZeroNightmare-UserGuider](https://github.com/yporoc/ChaosZeroNightmare-UserGuider)：	yporoc大佬整理制作的卡厄思其他功能相关工具汇总。
 
 A collection of tools for other Chaos Zero Nightmare features, put together by another community creator.
 
