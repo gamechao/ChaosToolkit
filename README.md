@@ -14,6 +14,18 @@
 
 A free MOD creation toolkit for the **Global version** of Chaos Zero Nightmare, combining asset browsing, Spine animation previews, texture editing, AI-assisted redraws, patch creation, and backup/restore.
 
+### 💬 工具 QQ 群 / QQ group
+
+工具交流 QQ 群：**949036810**。
+
+QQ group for tool discussion: **949036810**.
+
+### 🔗 卡厄思相关工具推荐 / Related tools
+
+[ChaosZeroNightmare-UserGuider](https://github.com/yporoc/ChaosZeroNightmare-UserGuider)：另外一位大佬整理的卡厄思其他功能相关工具汇总。
+
+A collection of tools for other Chaos Zero Nightmare features, put together by another community creator.
+
 ### ❤️ 支持与鼓励 / Support the project
 
 如果工具对你有帮助，欢迎自愿支持作者。支持与否都不影响使用。谢谢你的支持与鼓励！
