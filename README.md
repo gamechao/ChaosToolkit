@@ -38,11 +38,11 @@ If this tool helps you, optional support is appreciated. All available features 
 
 This repository distributes **binaries and documentation only; application implementation sources are not public**. It is not an open-source project. Use it for learning, research, and technical exchange only where authorized and permitted by applicable terms.
 
-- **[📦 下载 ChaosToolkit v1.0.0 / Download for Windows x64](https://github.com/gamechao/ChaosToolkit/releases/download/v1.0.0/ChaosToolkit-1.0.0-win-x64.zip)**
-- [查看发行版 / View release](https://github.com/gamechao/ChaosToolkit/releases/tag/v1.0.0) · [SHA-256 校验和 / Checksums](https://github.com/gamechao/ChaosToolkit/releases/download/v1.0.0/SHA256SUMS.txt)
+- **[📦 下载 ChaosToolkit v1.1.0 / Download for Windows x64](https://github.com/gamechao/ChaosToolkit/releases/download/v1.1.0/ChaosToolkit-1.1.0-win-x64.zip)**
+- [查看发行版 / View release](https://github.com/gamechao/ChaosToolkit/releases/tag/v1.1.0) · [SHA-256 校验和 / Checksums](https://github.com/gamechao/ChaosToolkit/releases/download/v1.1.0/SHA256SUMS.txt)
 - [使用许可 / Binary license](LICENSE.txt) · [免责声明 / Disclaimer](DISCLAIMER.md) · [第三方声明 / Third-party notices](THIRD_PARTY_NOTICES.md) · [隐私与数据 / Privacy](PRIVACY.md)
 
-**当前版本 / Current version: 1.0.0** · **国际服 / Global client only** · Windows 10/11 x64 · `Start.cmd`
+**当前版本 / Current version: 1.1.0** · **国际服 / Global client only** · Windows 10/11 x64 · `Start.cmd`
 
 ### 🎬 视频教程 / Video tutorial
 
@@ -76,7 +76,7 @@ English walkthrough: follow the tool operations and Mod creation workflow. For t
 ### 安装 / Installation
 
 1. **确认使用国际服客户端；国服请勿使用。** / **Confirm you have the Global client. Do not use the China server client.**
-2. 下载完整的 `ChaosToolkit-1.0.0-win-x64.zip` 与 `SHA256SUMS.txt`，核对 SHA-256。 / Download the complete ZIP and checksum file, then verify SHA-256.
+2. 下载完整的 `ChaosToolkit-1.1.0-win-x64.zip` 与 `SHA256SUMS.txt`，核对 SHA-256。 / Download the complete ZIP and checksum file, then verify SHA-256.
 3. 解压到可写的独立目录，不要放进游戏目录，也不要在压缩包中直接运行。 / Extract into a separate writable folder outside the game directory. Do not run inside the archive.
 4. 双击 **`Start.cmd`**，保留所有文件夹与启动文件。包内自带 Python 3.14 与 .NET 8 Windows Desktop 运行时，无需安装开发环境。 / Double-click **`Start.cmd`** and keep the complete folder structure. Python 3.14 and .NET 8 Windows Desktop runtimes are bundled; no development environment is required.
 5. 选择自己的**国际服游戏安装目录**及独立 **MOD 制作目录**，两者不要相互包含。 / Select your **Global game installation** and a separate **Mod workspace**. Neither folder should contain the other.
@@ -85,7 +85,7 @@ English walkthrough: follow the tool operations and Mod creation workflow. For t
 ### 目录结构 / Folder layout
 
 ```text
-ChaosToolkit-1.0.0-win-x64/
+ChaosToolkit-1.1.0-win-x64/
 ├─ Start.cmd                 # 启动入口 / Launcher
 ├─ Start.ps1                 # 启动脚本 / Launch script
 ├─ app/                      # 程序与引擎 / Application and engine
@@ -100,6 +100,21 @@ ChaosToolkit-1.0.0-win-x64/
 GitHub 自动生成的 **Source code** 附件只有仓库文档，不是可运行程序。请下载上面的 Windows 完整 ZIP。
 
 GitHub's automatically generated **Source code** archives contain repository documentation, not the application. Download the complete Windows ZIP linked above.
+
+</details>
+
+<details>
+<summary><strong>🔄 v1.1.0 热更恢复与升级 / Mod recovery and upgrading</strong></summary>
+
+游戏热更后：退出游戏 → 启动器检查／修复文件 → 「检查与交付 → 一键更新 MOD（热更后）…」。按上次安装清单统一恢复，保留制作素材和历史备份；资源不兼容或生成期间素材发生变化时停止，写入失败回滚。
+
+After a game update: exit the game, repair its files using the launcher, then run the one-click Mod update action. The previous installation list is rebuilt together. Materials and historical backups are retained; incompatible resources or concurrent edits stop the operation.
+
+升级工具时，请完整解压新包，备份并复制旧工具的整个 `data` 目录，保留原制作目录与旧备份的绝对路径。确认迁移及还原可用前不要删除旧目录。已有同名方案不会被默认模板覆盖。
+
+When upgrading the tool, extract the full package, back up and copy the complete old `data` directory, and keep original workspace/backup paths available until migration and restore are verified. Existing profiles are not overwritten by defaults.
+
+完整更新说明：[RELEASE_NOTES.md](RELEASE_NOTES.md)。
 
 </details>
 
@@ -157,13 +172,13 @@ Models, nodes, and remote service fees are not included. Requests may send textu
 
 1. 保存 MOD 制作副本，再通过“检查与交付”菜单生成游戏补丁。 / Save the Mod copy, then build a game patch through the checking and delivery menu.
 2. **确认目标为国际服，并正常退出游戏，再安装补丁。**工具不会自动关闭游戏。 / **Confirm the target is the Global client and exit the game normally before installing.** The tool does not close the game for you.
-3. 保留 `data` 中的安装备份与事务记录。一次安装一个制作版本。 / Retain installation backups and transaction records in `data`. Install one Mod version at a time.
+3. 保留 `data` 中的安装备份与事务记录。支持不同角色和独立资源的多个 MOD 共存；重复修改同一资源时使用新版本。 / Retain installation backups and transaction records in `data`. Multiple Mods can coexist; newer installations replace only overlapping resources.
 4. 重新进入游戏，检查对应角色、动作及实际显示。 / Reopen the game and inspect the affected character, animations, and actual appearance.
-5. 切换制作版本或游戏更新前，先退出游戏并还原，再检查兼容性。 / Before switching Mod versions or updating the game, exit, restore original files, and recheck compatibility.
+5. 游戏更新前建议退出游戏并还原；若热更已覆盖 MOD，先在启动器完成文件检查／修复，再使用「一键更新 MOD（热更后）」。 / Restore before a game update when possible. If an update has already overwritten Mods, repair game files with the launcher, then use the new one-click Mod update action.
 
-编辑器预览和离线检查不能代替实际游戏内验证。任意骨骼拓扑编辑、跨包合并及所有角色或更新的兼容性不作保证。
+编辑器预览和离线检查不能代替实际游戏内验证。任意骨骼拓扑编辑及所有角色或更新的兼容性不作保证。
 
-Editor previews and offline checks do not replace in-game verification. Arbitrary skeleton topology edits, cross-package merging, and compatibility with every character or update are not guaranteed.
+Editor previews and offline checks do not replace in-game verification. Arbitrary skeleton topology edits and compatibility with every character or update are not guaranteed.
 
 </details>
 
@@ -209,9 +224,9 @@ Check the server dependencies and model names required by your workflow. The pac
 
 ### 游戏更新后还能用吗？ / Will it work after a game update?
 
-不能保证。更新前先退出游戏并还原，更新后重新扫描、检查格式和角色显示，再决定是否安装补丁。
+更新前建议先退出游戏并还原。若 MOD 已被热更覆盖，请先在游戏启动器完成检查／修复，再使用「检查与交付 → 一键更新 MOD（热更后）…」。工具核对原版依赖、重新封包并保留旧记录和备份；资源不兼容时停止，需重新导出制作。
 
-Compatibility is not guaranteed. Exit and restore before updating, then rescan and check formats and character appearance before applying a patch.
+Restore before updating when possible. If Mods were overwritten, repair game files with the launcher and use the one-click Mod update action. Original dependencies are checked and old records/backups are kept. Incompatible resources require a new export.
 
 ### 反馈问题时提供什么？ / What should I include in a report?
 
@@ -224,3 +239,4 @@ Open an [issue](https://github.com/gamechao/ChaosToolkit/issues) with the tool v
 Remove keys, connection credentials, personal paths, task links, and assets you cannot redistribute before sharing.
 
 </details>
+
