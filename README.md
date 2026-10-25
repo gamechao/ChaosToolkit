@@ -38,11 +38,12 @@ If this tool helps you, optional support is appreciated. All available features 
 
 This repository distributes **binaries and documentation only; application implementation sources are not public**. It is not an open-source project. Use it for learning, research, and technical exchange only where authorized and permitted by applicable terms.
 
-- **[📦 下载 ChaosToolkit v1.1.0 / Download for Windows x64](https://github.com/gamechao/ChaosToolkit/releases/download/v1.1.0/ChaosToolkit-1.1.0-win-x64.zip)**
-- [查看发行版 / View release](https://github.com/gamechao/ChaosToolkit/releases/tag/v1.1.0) · [SHA-256 校验和 / Checksums](https://github.com/gamechao/ChaosToolkit/releases/download/v1.1.0/SHA256SUMS.txt)
+- **[📦 下载 ChaosToolkit v1.2.0 / Download for Windows x64](https://github.com/gamechao/ChaosToolkit/releases/download/v1.2.0/ChaosToolkit-1.2.0-win-x64.zip)**
+- [查看发行版 / View release](https://github.com/gamechao/ChaosToolkit/releases/tag/v1.2.0) · [SHA-256 校验和 / Checksums](https://github.com/gamechao/ChaosToolkit/releases/download/v1.2.0/SHA256SUMS.txt)
+- [ComfyUI BDX 图集节点 / Companion nodes: BrowndustAtalasNode.zip](https://github.com/gamechao/ChaosToolkit/releases/download/v1.2.0/BrowndustAtalasNode.zip)
 - [使用许可 / Binary license](LICENSE.txt) · [免责声明 / Disclaimer](DISCLAIMER.md) · [第三方声明 / Third-party notices](THIRD_PARTY_NOTICES.md) · [隐私与数据 / Privacy](PRIVACY.md)
 
-**当前版本 / Current version: 1.1.0** · **国际服 / Global client only** · Windows 10/11 x64 · `Start.cmd`
+**当前版本 / Current version: 1.2.0** · **国际服 / Global client only** · Windows 10/11 x64 · `Start.cmd`
 
 ### 🎬 视频教程 / Video tutorial
 
@@ -57,6 +58,8 @@ Chinese walkthrough on Bilibili: see the tool in action and the Mod results. For
 英文讲解版：查看工具操作与 MOD 制作流程。仅适用于国际服。
 
 English walkthrough: follow the tool operations and Mod creation workflow. For the Global client only.
+
+v1.2.0 自动识别并补齐旧 Spine 导出中缺失的原生事件时间线，不修改用户源文件；保留此前的 Spine 成套导入、语音事件、卡牌分类和换装/接缝处理。用户已确认 liveevent_30075 从导入到安装及游戏内动作、语音均正常，完整变化见 [更新日志](RELEASE_NOTES.md)。
 
 > 点击下面的功能标题即可展开或收起。首次使用建议先完成一个资源的预览与制作副本检查，再生成或安装补丁。
 >
@@ -76,7 +79,7 @@ English walkthrough: follow the tool operations and Mod creation workflow. For t
 ### 安装 / Installation
 
 1. **确认使用国际服客户端；国服请勿使用。** / **Confirm you have the Global client. Do not use the China server client.**
-2. 下载完整的 `ChaosToolkit-1.1.0-win-x64.zip` 与 `SHA256SUMS.txt`，核对 SHA-256。 / Download the complete ZIP and checksum file, then verify SHA-256.
+2. 取得完整的 `ChaosToolkit-1.2.0-win-x64.zip` 与 `SHA256SUMS.txt`，核对 SHA-256。 / Obtain the complete ZIP and checksum file, then verify SHA-256.
 3. 解压到可写的独立目录，不要放进游戏目录，也不要在压缩包中直接运行。 / Extract into a separate writable folder outside the game directory. Do not run inside the archive.
 4. 双击 **`Start.cmd`**，保留所有文件夹与启动文件。包内自带 Python 3.14 与 .NET 8 Windows Desktop 运行时，无需安装开发环境。 / Double-click **`Start.cmd`** and keep the complete folder structure. Python 3.14 and .NET 8 Windows Desktop runtimes are bundled; no development environment is required.
 5. 选择自己的**国际服游戏安装目录**及独立 **MOD 制作目录**，两者不要相互包含。 / Select your **Global game installation** and a separate **Mod workspace**. Neither folder should contain the other.
@@ -85,7 +88,7 @@ English walkthrough: follow the tool operations and Mod creation workflow. For t
 ### 目录结构 / Folder layout
 
 ```text
-ChaosToolkit-1.1.0-win-x64/
+ChaosToolkit-1.2.0-win-x64/
 ├─ Start.cmd                 # 启动入口 / Launcher
 ├─ Start.ps1                 # 启动脚本 / Launch script
 ├─ app/                      # 程序与引擎 / Application and engine
@@ -240,3 +243,9 @@ Remove keys, connection credentials, personal paths, task links, and assets you 
 
 </details>
 
+
+## ComfyUI BDX 图集节点 / Companion ComfyUI nodes
+
+可选附件 `BrowndustAtalasNode.zip` 独立提供 BDXLoadAtlas、BDXCropAtlas、BDXSaveAtlas，不包含模型、游戏素材、用户配置或 MOD。将压缩包中的 `browndust_atlas` 文件夹放入自己的 `ComfyUI/custom_nodes/`；已有同名节点时先备份。等待自己的任务结束后再重启 ComfyUI。需要目标环境已有 torch、numpy、Pillow 和 ComfyUI 的 folder_paths；无需另开 ComfyUI 服务。其他工作流节点（例如 KJNodes 的 VRAM_Debug）不在此附件内。
+
+Optional companion ZIP with BDXLoadAtlas, BDXCropAtlas and BDXSaveAtlas. Copy `browndust_atlas` into your own `ComfyUI/custom_nodes/`, back up an existing installation, and restart after your jobs finish. Requires the target ComfyUI environment's torch, numpy, Pillow and folder_paths. Models and other workflow nodes are not included. Node CPU checks do not replace installation testing on your machine.
