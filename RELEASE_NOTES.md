@@ -1,4 +1,38 @@
-# ChaosToolkit v1.2.0
+# ChaosToolkit v1.2.1
+
+## 卡牌外观资源补全
+
+- 补全「瞬间的残影」卡牌外观。按客户端 card_skin 表匹配名称、角色和档位，修复旧扫描漏掉 effect 目录高阶资源的问题。
+- 新增「卡牌外观卡面」「卡牌外观动画」「卡牌外观特效」三个筛选类型。列表显示名称、普通/高阶档位及主体/背景/特效，可按客户端繁体卡面名称、角色或资源 ID 搜索。
+- 「北極星的邀請」「你專屬的守護天使」分别提供普通 RARE 静态卡面，以及高阶 SUPER_RARE 的主体动画、背景和特效。
+- 「鼠兔的幸福」「解決師的閒聊」「大胃王的微笑」「記錄者的回憶」等 COMMON 外观提供静态卡面；表中未指定独立动画时，不补造动画或误关联角色战斗技能特效。
+- 本次客户端 build 130 核对 20 个外观、24 个独立资源（18 张静态卡面、2 个高阶主体、4 个背景/特效）。同一客户端资源库为 3,999 → 4,005 项，补入 6 个漏扫资源。数量随客户端变化，不等于全部资源均已游戏内验收。
+- 主体、背景和特效仍作为独立资源预览，不自动合成为游戏内多层画面。两套主体和特效在采样中有动态变化，背景的可见几何在本次采样中保持静止。
+
+## 兼容与验证
+
+- 继承 v1.2.0 的 Spine 成套导入、旧导出语音事件自动补齐、SCT 标志/PMA/ASTC 尺寸修复、服装裁切和接缝处理。
+- 完整解压 `ChaosToolkit-1.2.1-win-x64.zip`，核对 `SHA256SUMS.txt`，运行 `Start.cmd`，不要只替换 EXE。升级前备份旧工具完整 data 并保留制作素材及备份路径；同名用户方案不会被默认模板覆盖。
+- 63 项后端测试通过；涉及的 12 个资源通过桌面预览及名称/人物/类型筛选检查。可选肤色参考四类、外部参考图上传/清除/无参考图方案隔离回归通过；发行包另做搬移运行及依赖校验。
+- 无关资源条目未发现变化。本次未重新安装/还原 MOD、未提交真实 GPU 任务；游戏内多层最终效果尚未作本次验收，不能据此宣称所有角色和功能均已确认。
+- 仓库只公开程序及说明，不公开应用实现源码。发行包不含提取的游戏素材、用户 MOD、个人配置、模型或凭据。
+
+## English — v1.2.1
+
+Adds client-table-based card appearance discovery, three appearance categories and localized names. Regular RARE artwork and SUPER_RARE main/background/effect assets are searchable by card title, character and resource ID. COMMON appearances without a model remain static; unrelated battle effects are not attached by character-name guessing.
+
+The checked build 130 contains 20 appearances represented by 24 independent assets. Six previously omitted high-tier resources expand the same-client catalog from 3,999 to 4,005 entries. Layers are previewed separately rather than composited into a final game scene.
+
+63 backend tests and the 12 relevant desktop previews pass, along with optional-skin and external-reference regressions. No game writes or live GPU tasks were performed. These checks do not certify every asset or final in-game layered effects. Previous v1.2.0 features and existing user data remain supported.
+
+- [Windows x64 / Download](https://github.com/gamechao/ChaosToolkit/releases/download/v1.2.1/ChaosToolkit-1.2.1-win-x64.zip)
+- [SHA256SUMS.txt](https://github.com/gamechao/ChaosToolkit/releases/download/v1.2.1/SHA256SUMS.txt)
+- [BDX 配套节点 / Companion nodes](https://github.com/gamechao/ChaosToolkit/releases/download/v1.2.1/BrowndustAtalasNode.zip)（与 v1.2.0 相同）
+- [上一版本 v1.2.0 / Previous release](https://github.com/gamechao/ChaosToolkit/releases/tag/v1.2.0)
+
+---
+
+# ChaosToolkit v1.2.0（历史记录 / History）
 
 - 导入旧 Spine JSON 时，自动从当前制作版本对应原生资源补齐缺失的事件时间线，无需手动恢复或额外开关。
 - 保留已有事件时间线；定义冲突或缺少对应动作时拒绝恢复。仅制作版本内部保存补齐副本，不修改用户选中的 JSON、atlas 或 PNG。
