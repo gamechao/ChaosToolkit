@@ -1,4 +1,33 @@
-# ChaosToolkit v1.2.1
+# ChaosToolkit v1.2.2
+
+## 大招资源与修改流程
+
+- 扩展大招资源导出：覆盖角色人物层、演出配置及其图集、粒子贴图和镜头依赖；支持导出包内 Spine、WebP 和 CFX 分层预览。粒子、自定义着色、运镜和挂点的游戏表现不保证由离线预览完整复现。
+- Spine 人物层打开时暂停在可见帧。选择当前隐藏的部件会定位到可见时刻，新增时间输入，解决短暂人物层播放后无法选中、无法继续原重绘流程的问题。
+- 保留组装角色重绘、遮罩、UV 回投、候选对比和确认保存流程；确认后再生成补丁并手动安装。
+- SCT 超限时增加“生成容量适配候选”和取消入口。候选原样保留未修改 ASTC 块，尝试紧凑编码和存储；必要时仅尝试轻度平滑修改区域。对比编码回读后明确确认，不改变原编辑 PNG。修改 PNG 后拦截已过期的容量候选。
+- 增加 WebP 帧导出、选区调色、修改帧导入及整段动画导入；验证尺寸、帧数、Alpha、时长和循环。容量不足时必须明确选择允许有损适配；最终以编码回读为准，不自动将单帧修改传播到其他帧。
+- 支持新版游戏资源校验和兼容制作版本同步；保留素材及备份，归档过期安装记录，不自动重装 MOD。此次核对客户端 build 133。
+
+## 验证与升级
+
+- 继承 v1.2.1 卡牌外观与既有 Spine 成套导入、语音事件恢复、可选肤色参考及外部参考图流程。
+- 90 项后端测试通过；肤色参考四类、外部参考图隔离、Spine 选中与模拟重绘、容量候选确认/取消及离线补丁回读通过。发布包另做搬移运行与隐私检查。
+- 用户已在游戏内确认席琳娜 `1005_cut1_5` 首镜头人物层修改生效。本例不代表全部镜头、全部角色或 WebP 修改均已游戏内验收；完整换装需处理各镜头对应的人物资源。
+- 完整解压发行包后运行 `Start.cmd`。升级时保留旧工具的数据、制作版本和备份，手动选择原 MOD 目录；默认模板不覆盖同名用户方案。
+- 发行包与仓库不包含本机 MOD、游戏提取资源、个人设置、连接凭据、私人提示词或参考图。只公开二进制程序、使用说明和通用默认模板。
+
+## English — v1.2.2
+
+Adds ultimate asset export and layered previews, frame-based WebP editing, visible-pose selection and time controls for Spine cut-ins, explicit SCT capacity candidates, and compatible game-version synchronization. Existing card appearance, Spine import, voice-event restoration and redraw features are retained.
+
+Capacity candidates preserve untouched ASTC blocks and require review before use. Source editing PNGs remain intact; later edits invalidate an accepted candidate. Offline checks and 90 backend tests pass. A user confirmed the first Selena cut-in layer in game; this does not certify every character, shot or WebP animation.
+
+The release contains binaries, documentation and generic templates only, with no local Mods, extracted game assets, personal settings, credentials or reference images. Unpack the complete ZIP and run `Start.cmd`; retain existing user data and backups when upgrading.
+
+---
+
+# ChaosToolkit v1.2.1（历史记录 / History）
 
 ## 卡牌外观资源补全
 
