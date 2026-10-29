@@ -38,12 +38,12 @@ If this tool helps you, optional support is appreciated. All available features 
 
 This repository distributes **binaries and documentation only; application implementation sources are not public**. It is not an open-source project. Use it for learning, research, and technical exchange only where authorized and permitted by applicable terms.
 
-- **[📦 下载 ChaosToolkit v1.2.2 / Download for Windows x64](https://github.com/gamechao/ChaosToolkit/releases/download/v1.2.2/ChaosToolkit-1.2.2-win-x64.zip)**
-- [查看发行版 / View release](https://github.com/gamechao/ChaosToolkit/releases/tag/v1.2.2) · [SHA-256 校验和 / Checksums](https://github.com/gamechao/ChaosToolkit/releases/download/v1.2.2/SHA256SUMS.txt)
-- [ComfyUI BDX 图集节点 / Companion nodes: BrowndustAtalasNode.zip](https://github.com/gamechao/ChaosToolkit/releases/download/v1.2.2/BrowndustAtalasNode.zip)
+- **[📦 下载 ChaosToolkit v1.2.3 / Download for Windows x64](https://github.com/gamechao/ChaosToolkit/releases/download/v1.2.3/ChaosToolkit-1.2.3-win-x64.zip)**
+- [查看发行版 / View release](https://github.com/gamechao/ChaosToolkit/releases/tag/v1.2.3) · [SHA-256 校验和 / Checksums](https://github.com/gamechao/ChaosToolkit/releases/download/v1.2.3/SHA256SUMS.txt)
+- [ComfyUI BDX 图集节点 / Companion nodes: BrowndustAtalasNode.zip](https://github.com/gamechao/ChaosToolkit/releases/download/v1.2.3/BrowndustAtalasNode.zip)
 - [使用许可 / Binary license](LICENSE.txt) · [免责声明 / Disclaimer](DISCLAIMER.md) · [第三方声明 / Third-party notices](THIRD_PARTY_NOTICES.md) · [隐私与数据 / Privacy](PRIVACY.md)
 
-**当前版本 / Current version: 1.2.2** · **国际服 / Global client only** · Windows 10/11 x64 · `Start.cmd`
+**当前版本 / Current version: 1.2.3** · **国际服 / Global client only** · Windows 10/11 x64 · `Start.cmd`
 
 ### 🎬 视频教程 / Video tutorial
 
@@ -59,9 +59,9 @@ Chinese walkthrough on Bilibili: see the tool in action and the Mod results. For
 
 English walkthrough: follow the tool operations and Mod creation workflow. For the Global client only.
 
-v1.2.2 新增大招资源导出和分层预览、WebP 帧编辑、Spine 人物层可见帧定位、贴图容量候选对比及游戏版本同步，保留卡牌外观、成套导入和原重绘流程。完整变化见[更新日志](RELEASE_NOTES.md)。
+v1.2.3 修复旧制作包的资源清单兼容处理，以及没有旧安装记录时一键更新 MOD 的空路径异常。资源不兼容时保留素材并明确提示。完整变化见[更新日志](RELEASE_NOTES.md)。
 
-v1.2.2 adds ultimate resource export and layered previews, WebP editing, visible-pose selection for Spine cut-ins, explicit texture-capacity candidates, and game-version synchronization. Card appearances and existing import/redraw workflows remain available. See [release notes](RELEASE_NOTES.md).
+v1.2.3 fixes legacy Mod package manifest compatibility and the null-path error when updating without a previous installation record. Incompatible resources are reported while preserving editing assets. See [release notes](RELEASE_NOTES.md).
 
 > 点击下面的功能标题即可展开或收起。首次使用建议先完成一个资源的预览与制作副本检查，再生成或安装补丁。
 >
@@ -81,7 +81,7 @@ v1.2.2 adds ultimate resource export and layered previews, WebP editing, visible
 ### 安装 / Installation
 
 1. **确认使用国际服客户端；国服请勿使用。** / **Confirm you have the Global client. Do not use the China server client.**
-2. 取得完整的 `ChaosToolkit-1.2.2-win-x64.zip` 与 `SHA256SUMS.txt`，核对 SHA-256。 / Obtain the complete ZIP and checksum file, then verify SHA-256.
+2. 取得完整的 `ChaosToolkit-1.2.3-win-x64.zip` 与 `SHA256SUMS.txt`，核对 SHA-256。 / Obtain the complete ZIP and checksum file, then verify SHA-256.
 3. 解压到可写的独立目录，不要放进游戏目录，也不要在压缩包中直接运行。 / Extract into a separate writable folder outside the game directory. Do not run inside the archive.
 4. 双击 **`Start.cmd`**，保留所有文件夹与启动文件。包内自带 Python 3.14 与 .NET 8 Windows Desktop 运行时，无需安装开发环境。 / Double-click **`Start.cmd`** and keep the complete folder structure. Python 3.14 and .NET 8 Windows Desktop runtimes are bundled; no development environment is required.
 5. 选择自己的**国际服游戏安装目录**及独立 **MOD 制作目录**，两者不要相互包含。 / Select your **Global game installation** and a separate **Mod workspace**. Neither folder should contain the other.
@@ -90,7 +90,7 @@ v1.2.2 adds ultimate resource export and layered previews, WebP editing, visible
 ### 目录结构 / Folder layout
 
 ```text
-ChaosToolkit-1.2.2-win-x64/
+ChaosToolkit-1.2.3-win-x64/
 ├─ Start.cmd                 # 启动入口 / Launcher
 ├─ Start.ps1                 # 启动脚本 / Launch script
 ├─ app/                      # 程序与引擎 / Application and engine
