@@ -10,6 +10,18 @@
 
 # ChaosToolkit / 卡厄思 MOD 工具箱
 
+## 1.3.0 · MOD 安装管理
+
+工具箱与 MOD 编辑器已分开使用。导入别人制作的 MOD 包、批量安装、启用、禁用和移除，都可在工具箱内完成，无需打开编辑器；需要制作或修改作品时再进入编辑器。
+
+- 支持批量导入旧版制作包、全选及清除选择；按人物和资源种类排序，冲突版本相邻展示。
+- 预览和批量管理显示同资源冲突；容量适配先提供对照与确认，再执行安装。
+- 只重建本次变动的分块，复用其他已安装 MOD，提供阶段百分比和完成数量。
+- 安装成功后清理本次临时补丁、切换快照和编码缓存；必要原版备份保留，用于禁用及还原。预览缓存与原版备份不等于安装临时缓存。
+- 视频演示中的大体积缓存是为演示故意保留的旧缓存，不代表新版正常安装的缓存堆积。
+
+Import and manage shared MOD packages directly in the toolbox. The editor is only needed for authoring. Version 1.3.0 adds batch selection, early conflict checks, incremental chunk reuse, determinate step progress, and automatic cleanup of successful-install temporary files while retaining original restore backups.
+
 面向《卡厄思梦境》**国际服**的 MOD 制作工具，集成资源浏览、Spine 动画预览、贴图编辑、AI 辅助重绘、补丁生成与备份还原。免费提供使用，希望帮助大家更方便地制作和检查自己的作品。
 
 A free MOD creation toolkit for the **Global version** of Chaos Zero Nightmare, combining asset browsing, Spine animation previews, texture editing, AI-assisted redraws, patch creation, and backup/restore.
@@ -38,12 +50,12 @@ If this tool helps you, optional support is appreciated. All available features 
 
 This repository distributes **binaries and documentation only; application implementation sources are not public**. It is not an open-source project. Use it for learning, research, and technical exchange only where authorized and permitted by applicable terms.
 
-- **[📦 下载 ChaosToolkit v1.2.3 / Download for Windows x64](https://github.com/gamechao/ChaosToolkit/releases/download/v1.2.3/ChaosToolkit-1.2.3-win-x64.zip)**
-- [查看发行版 / View release](https://github.com/gamechao/ChaosToolkit/releases/tag/v1.2.3) · [SHA-256 校验和 / Checksums](https://github.com/gamechao/ChaosToolkit/releases/download/v1.2.3/SHA256SUMS.txt)
+- **[📦 下载 ChaosToolkit v1.3.0 / Download for Windows x64](https://github.com/gamechao/ChaosToolkit/releases/download/v1.3.0/ChaosToolkit-1.3.0-win-x64.zip)**
+- [查看发行版 / View release](https://github.com/gamechao/ChaosToolkit/releases/tag/v1.3.0) · [SHA-256 校验和 / Checksums](https://github.com/gamechao/ChaosToolkit/releases/download/v1.3.0/SHA256SUMS.txt)
 - [ComfyUI BDX 图集节点 / Companion nodes: BrowndustAtalasNode.zip](https://github.com/gamechao/ChaosToolkit/releases/download/v1.2.3/BrowndustAtalasNode.zip)
 - [使用许可 / Binary license](LICENSE.txt) · [免责声明 / Disclaimer](DISCLAIMER.md) · [第三方声明 / Third-party notices](THIRD_PARTY_NOTICES.md) · [隐私与数据 / Privacy](PRIVACY.md)
 
-**当前版本 / Current version: 1.2.3** · **国际服 / Global client only** · Windows 10/11 x64 · `Start.cmd`
+**当前版本 / Current version: 1.3.0** · **国际服 / Global client only** · Windows 10/11 x64 · `Start.cmd`
 
 ### 🎬 视频教程 / Video tutorial
 
@@ -59,9 +71,9 @@ Chinese walkthrough on Bilibili: see the tool in action and the Mod results. For
 
 English walkthrough: follow the tool operations and Mod creation workflow. For the Global client only.
 
-v1.2.3 修复旧制作包的资源清单兼容处理，以及没有旧安装记录时一键更新 MOD 的空路径异常。资源不兼容时保留素材并明确提示。完整变化见[更新日志](RELEASE_NOTES.md)。
+v1.3.0 新增工具箱内批量 MOD 管理、安装前冲突检查、增量分块复用、步骤进度与安装后临时缓存自动清理。完整变化见[更新日志](RELEASE_NOTES.md)。
 
-v1.2.3 fixes legacy Mod package manifest compatibility and the null-path error when updating without a previous installation record. Incompatible resources are reported while preserving editing assets. See [release notes](RELEASE_NOTES.md).
+v1.3.0 adds batch Mod management in the toolbox, pre-install conflict checks, incremental chunk reuse, step progress, and automatic temporary-cache cleanup after installation. See [release notes](RELEASE_NOTES.md).
 
 > 点击下面的功能标题即可展开或收起。首次使用建议先完成一个资源的预览与制作副本检查，再生成或安装补丁。
 >
@@ -81,7 +93,7 @@ v1.2.3 fixes legacy Mod package manifest compatibility and the null-path error w
 ### 安装 / Installation
 
 1. **确认使用国际服客户端；国服请勿使用。** / **Confirm you have the Global client. Do not use the China server client.**
-2. 取得完整的 `ChaosToolkit-1.2.3-win-x64.zip` 与 `SHA256SUMS.txt`，核对 SHA-256。 / Obtain the complete ZIP and checksum file, then verify SHA-256.
+2. 取得完整的 `ChaosToolkit-1.3.0-win-x64.zip` 与 `SHA256SUMS.txt`，核对 SHA-256。 / Obtain the complete ZIP and checksum file, then verify SHA-256.
 3. 解压到可写的独立目录，不要放进游戏目录，也不要在压缩包中直接运行。 / Extract into a separate writable folder outside the game directory. Do not run inside the archive.
 4. 双击 **`Start.cmd`**，保留所有文件夹与启动文件。包内自带 Python 3.14 与 .NET 8 Windows Desktop 运行时，无需安装开发环境。 / Double-click **`Start.cmd`** and keep the complete folder structure. Python 3.14 and .NET 8 Windows Desktop runtimes are bundled; no development environment is required.
 5. 选择自己的**国际服游戏安装目录**及独立 **MOD 制作目录**，两者不要相互包含。 / Select your **Global game installation** and a separate **Mod workspace**. Neither folder should contain the other.
@@ -90,7 +102,7 @@ v1.2.3 fixes legacy Mod package manifest compatibility and the null-path error w
 ### 目录结构 / Folder layout
 
 ```text
-ChaosToolkit-1.2.3-win-x64/
+ChaosToolkit-1.3.0-win-x64/
 ├─ Start.cmd                 # 启动入口 / Launcher
 ├─ Start.ps1                 # 启动脚本 / Launch script
 ├─ app/                      # 程序与引擎 / Application and engine

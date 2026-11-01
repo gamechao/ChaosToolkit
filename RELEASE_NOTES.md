@@ -1,13 +1,11 @@
-# ChaosToolkit v1.2.3
+# ChaosToolkit v1.3.0
 
-## 修复内容
+## 更新内容
 
-- 修复旧制作包因整体游戏资源清单变化而无法生成补丁的问题。导入时逐项核对目标原版资源，一致时自动适配当前版本；已导入的旧制作版本也支持生成时核验，无需重新导入。
-- 目标资源发生实际变化时保留制作素材并明确提示冲突，防止生成不兼容补丁。
-- 修复没有旧安装记录时，“一键更新 MOD”触发 `NoneType` 空路径异常的问题；补充空游戏目录及无效归档路径的明确提示。
-
-## English
-
-- Fixed legacy Mod packages being blocked by unrelated changes to the global game manifest. Matching original dependencies are checked individually and adapted to the current version, including previously imported projects.
-- Preserve imported assets and report conflicting resources when actual dependencies have changed, preventing incompatible patches.
-- Fixed the `NoneType` path error when updating Mods without a previous installation record, with clear messages for empty game paths and invalid archived records.
+- 工具箱独立完成制作包导入、批量安装、启用/禁用、可恢复移除，无需打开 MOD 编辑器。旧制作包继续兼容。
+- 管理列表按人物、资源种类排序，冲突版本相邻；预览、批量选择与安装前均提示冲突。支持全选和清除选择。
+- 增量安装只重建变动分块，保留同块内其他 MOD，复用未变分块；保留完整校验、必要原版备份和失败回滚。
+- 后台异步操作提供任务步骤百分比、阶段完成数量、当前文件和已用时间；步骤进度不等于剩余耗时预测。
+- 安装成功后自动清理本次临时补丁、切换快照及编码缓存；必要原版备份保留。另提供旧缓存与历史数据的引用检查及清理。
+- 容量超限时提供压缩候选与对照确认，不静默跳过有效 MOD；原始制作素材保留。
+- 全部禁用时精确还原原版备用索引与 etag，不用主索引副本覆盖原版备用文件。
